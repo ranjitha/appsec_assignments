@@ -1,20 +1,20 @@
 from PIL import Image
 
-def make_square(image, min_size=256):
-    x, y = image.size
+def make_square(im, min_size=256):
+    x, y = im.size
     size = max(min_size, x, y)
-    new_image = image.resize((size, size))
-    return new_image
+    new_im = im.resize((size,size))
+    return new_im
 
 if __name__=="__main__":
     done = False
     while(done == False):
-        image_source_path = input("Please enter a path to an image: ")
+        image = raw_input("Please enter a path to an image: ")
         try:
-            test_image = Image.open(image_source_path)
-            generated_square_image = make_square(test_image)
-            generated_square_image.show()
-            generated_square_image.save("saved_square_image.png")
+            test_image = Image.open(image)
+            new_image = make_square(test_image)
+            new_image.show()
+            new_image.save("squaredImage.png")
             done = True
         except:
-            raise OSError("Improper Path to file")
+            raise OSError("Improper Path")
