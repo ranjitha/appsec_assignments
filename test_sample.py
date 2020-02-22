@@ -1,7 +1,7 @@
 import pytest
 def test_file1_method1():
-	x=5
-	y=6
+	x=1
+	y=2
 	assert x+1 == y, "test failed"
 	assert x == y, "test failed"
 def test_file1_method2():
