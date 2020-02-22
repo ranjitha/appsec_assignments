@@ -9,12 +9,13 @@ def make_square(im, min_size=256):
 if __name__=="__main__":
     done = False
     while(done == False):
-        image = raw_input("Please enter a path to an image: ")
+        image = input("Please enter a path to an image: ")
+        new_image_name = input("Enter new file name for scaled image: ")
         try:
             test_image = Image.open(image)
             new_image = make_square(test_image)
             new_image.show()
-            new_image.save("squaredImage.png")
+            new_image.save("new_image_name")
             done = True
         except:
             raise OSError("Improper Path")
