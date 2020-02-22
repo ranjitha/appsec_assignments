@@ -16,7 +16,7 @@ pip3 install pillow
 from PIL import Image
 
 # input image from user via terminal/command line 
-# initialize this file to a variable say img
+# initialize this file to a variable, say img
 
 img.size # returns a tuple with (width, height)
 img.resize((new_width, new_height)) # returns a new scaled image with the new dimensions that are passed as arguments
